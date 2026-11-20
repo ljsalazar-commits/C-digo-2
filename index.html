@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite mostrar correctamente los acentos
+     y caracteres especiales como la letra ñ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Ajusta el área de visualización al ancho de la pantalla-->
+    <title>Página de Lujo / Programación y baile</title>
+    
+    <!--Resume el contenido de la página, Google puede usarlo en sus resultados de búsqueda-->
+    <meta name="description"
+    content="Página de Lujo, donde comparto mis gustos por la programación y el baile">
+    
+    <!-- name="Keywords" ayuda a los motores de búsqueda a identificar el contenido de la página-->
+    <meta name="Keywords"
+    content="Lujo, películas, baile, comida, música">
+    
+    <!-- name = "author" indica el autor de la página -->
+    <meta name="author" content="Luis Salazar">
+
+    <!-- Aviso de contenido propio -->
+    <meta name="copyright" content="© 2026 Luis Salazar. Todos los derechos reservados.">
+
+
+ <!-- ACTIVIDAD 3. Cargamos el CSS de Bootstrap desde Internet. -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+<!-- Conectamos nuestro CSS, debe de coincidir en la misma carpeta HTML-->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <div class="container my-4"></div>
+
+    <!-- Contenido de la página, título principal de la página-->
+     <!-- Style aplica un estilo CSS y color del encabezado -->
+        <h1 id="inicio">Bienvenido a la página de Lujo</h1>
+    <!-- Este es un párrafo de ejemplo -->
+        <p>Esta es una simple página creada con HTML.</p>
+
+    <!-- ========== ALERTA ============ -->
+        <div class="alert alert-info" role="alert">
+        ¡Bienvenido! Aqui comparto mis gustos por el baile, la música y los videojuegos.
+        </div>
+
+     <!-- ========== BOTONES PARA NAVEGAR ========== -->
+      <!-- href indica la ruta del archivo al que se quiere navegar. id="pasatiempos" -->
+       <nav class="navbar navbar-expand-lg bg-light mb-4" 
+            aria-label="Secciones de la página">
+            <div class="container-fluid">
+                <!--href=#inicio lleva al elemento con id="inicio"-->
+                <a class="navbar-brand href="#inicio"> Página de Lujo</a>
+
+                <!-- #menu debe coincidir con el id menu -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        aria-controls="menu"
+                        aria-expanded="false"
+                        aria-label="Abrir o cerrar menú">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <div class="navbar-nav gap-2">
+                         <a href="#pasatiempos" class="btn btn-primary">
+                         Mis pasatiempos
+                        </a>
+                        <a href="#comidas" class="btn btn-succes mb-2">
+                            Mis comidas favoritas
+                        </a>
+                        <a href="#planes" class="btn btn-warning mb-2">
+                            Mis planes para desconectarme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    <!-- ============ PRESENTACIÓN ============ -->
+
+        <!-- h2 sirve para crear un subtitulo -->
+    <h2>Me gusta mucho la producción audivisual</h2>
+    <!-- h3 se puede organizar un subtema dentro de h2 -->
+    <h3>Me gusta comer hamburguesas y espagueti</h3>
+    <!-- h4 se utiliza para subdividir aún más el contenido
+     en detalles menores -->
+    <h4>Me gusta ver películas en el cine, pronto quisiera ver Doomsday</h4>
+    <!-- h5 se usa para agregar detalles adicionales 
+     o información específica -->
+    <h5>Me gusta mucho la música, mi canción favorita es "My way - Frank Sinatra"</h5>
+    <!-- h6 se utiliza para notas o detalles 
+     adicionales muy esopecíficos-->
+    <h6>Mi pasatiempo favorito es bailar y jugar videojuegos</h6>
+
+    <!-- ========= CARRUSEL ========= -->
+     <section class="mt-4">
+        <h2 class="text-primary">Mis gustos en imagenes</h2>
+        <!-- El carrusel crea el componente y slide agrega la transicion, el id permite que las flechas encuentren el carrusel -->
+         <div id="carrusel" class="carousel slide bg-dark">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="img/Doom RDJ.png"
+                        class="d-block w-100"
+                        alt="Imagen de Doom">
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="img/PS4-SPider-Man-Webs.avif"
+                        class="d-block w-100"
+                        alt="Imagen de videojuegos">
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="img/Baile Lujo.jpeg"
+                        class="d-block w-100"
+                        alt="Imagen de baile">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carrusel"
+                    data-bs-slide="prev"
+                    aria-label="Imagen anterior">
+                    <span class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+            </button>
+         </div>
+         </section>
+
+
+    <!-- =============== TARJETAS ============== -->
+     <section class="mt-4">
+        <h2 class="text_primary">Acerca de mis gustos</h2>
+        <!-- Tarjeta básica card crea el contenedor -->
+         <div class="card mb-4">
+            <!-- card body crea el contenido de la terjeta -->
+            <div class="card-body">
+                <h5 class="card-title">¿Qué me gusta?</h5>
+                <p class="card-text">Me gusta mucha bailar y aprender cosas nuevas</p>
+                    <!-- Este en lace lleva a la tabla de mis planes-->
+                <a href="#planes" class="btn btn-primary">Conoce de mis planes</a>
+            </div>
+        <div>
+        <!--Tarjeta con Imagen
+        Usamos la imagen de doomsday-->
+        <div class="card mb-4">
+    
+    <!-- src es la ruta de la imagen, alt describe la imagen width "300" le da un ancho de 300 pixeles a la imagen -->
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnvsqf6tTQHNpM8w66XGzWYl8xrDaXOQGzfjZdjnvUGw&s=10" 
+            alt="imagen doomsday"
+            width="300"
+            class="img-fluid">
+
+        <div class="card-body">
+            <h3 class="card-title">Avengers: Doomsday</h3>
+            <p class="card-text">Me gusta mucho el cine, ya quiero ver avengers doomsday</p>
+                <a href="#pasatiempos" class="btn btn-danger">Conoce mis pasatiempos</a>
+        </div>
+    </div>
+
+<!--Tarjeta con Imagen
+     Usamos la imagen de videojuegos-->
+    <div class="card mb-4">
+        <img 
+            src="https://i.blogs.es/21df24/spider/1200_900.jpeg" 
+            alt="imagen videojuegos"
+            width="300"
+            class="img-fluid">
+        <div class="card-body">
+            <h3 class="card-title">Videojuegos</h3>
+            <p class="card-text">Me gusta mucho jugar videojuegos, principalmente Spider-Man</p>
+            <a href="#pasatiempos" class="btn btn-danger">Conoce mis pasatiempos</a>
+        </div>
+    </div>
+
+<!--Tarjeta con Imagen
+         Usamos la imagen de baile-->
+    <div class="card mb-4">
+        <div class="card-header">
+            XV años Jimena
+        </div>
+        <img 
+            src="img/Baile Lujo 3.jpeg" 
+            alt="imagen baile"
+            width="300"
+            class="img-fluid">
+        <div class="card-body">
+            <h3 class="card-title">Baile</h3>
+            <p class="card-text">Me gusta mucho bailar, soy chambelán en XV años</p>
+                <a href="#pasatiempos" class="btn btn-danger">Conoce mis pasatiempos</a>
+        </div>
+    </div>
+    </section>
+
+    
+
+<!-- LISTA NO ORDENADA -->
+<section>
+    <h2>Cosas que hago en mi tiempo libre</h2>
+ <!-- ul crea una lista no ordenada, li crea un elemento de la lista-->
+    <ul>
+        <li>Ver películas</li>
+        <li>Escuchar música</li>
+        <li>Bailar</li>
+        <li>Jugar videojuegos</li>
+    </ul>
+</section>
+ 
+<!-- LISTA ORDENADA -->
+ <section>
+    <h2>Mis comidas favoritas</h2>
+    <!-- ol crea una lista ordenada, li crea un elemento de la lista-->
+    <ol>
+        <li>Espagueti</li>
+        <li>Hamburguesas</li>
+        <li>Lasagna</li>
+        <li>Cortes de carne </li>
+    </ol>
+</section>
+
+<!--Tabla -->
+<h2>Mis planes para desconectarme</h2>
+<table border="1">
+    <!-- tr crea una fila de la tabla, th crea un encabezado de la tabla-->
+    <tr>
+        <th>Tiempo disponible</th>
+        <th>Planes</th>
+        <th>Qué necesito</th>
+    </tr>
+    <!-- td crea una celda de la tabla -->
+    <tr>
+        <td>4 horas</td>
+        <td>Bailar</td>
+        <td>Escuchar música</td>
+    </tr>
+    <tr>
+        <td>45 minutos</td>
+        <td>Jugar una partida</td>
+        <td>Consola, juegos y control remoto</td>
+    </tr>
+    <tr> 
+        <td>2 horas</td>
+        <td>Ver una película</td>
+        <td>Televisión y palomitas</td>
+    </tr>
+ </table>
+
+<!-- ACTIVIDAD 3. Cargamos el JavaScript de Bootstrap.
+         Se usa en componentes interactivos, como los menús desplegables. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

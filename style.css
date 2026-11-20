@@ -1,0 +1,51 @@
+/* Body aplica estos estilos a toda la pagina */
+body {
+    background-color: whitesmoke; /*Color de dondo*/
+    font-family: Arial, sans-serif; /*Fuente*/
+    color: #222222; /*Color del texto*/
+}
+/* Color cambia el texto del titulo principal gin-top agrega espacio superior */
+h1 {
+    color: navy;
+    margin-top: 24px;
+}
+/* El punto indica que seleccionamos u a clase, .box aplica estilos al div con la clase box */
+.box {
+    background-color: aliceblue; /*Color de fondo*/
+    border: 2px solid navy; /*Borde*/
+    padding: 16px; /*Espacio internado*/
+    margin-bottom: 24px; /*Espaciado inferior*/
+}
+/* Esta clase resalta las palabras que están dentro del span*/
+.destacado {
+    color: darkred; /*Color del texto*/
+    font-weight: bold; /*negrita*/
+}
+/* Deja espacio después de cada sección */
+section {
+    margin-bottom: 32px; /*Espaciado inferior*/
+}
+
+/* Display: Block coloca cada imagen en su propia linea max-width limita el tamaño de la imagne height: auto mantiene la proporción de la imagen */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 12 px;
+}
+/* border-collpase une los bordes de la celdas. */
+table {
+    border-collapse: collapse;
+    background-color: white; /*Color del fondo*/
+}
+
+/* La coma aplica los mismos estilos a th y td */
+th, td {
+    border: 1px solid #666666;
+    padding: 8px; /*Espaciado interno*/
+}
+
+/* Aplica un fondo solo a los encabezados */
+th {
+    background-color: aliceblue;
+}
